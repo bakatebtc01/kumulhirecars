@@ -1,0 +1,167 @@
+:root {
+  --brand-red: #a9040b;
+  --brand-yellow: #f4c300;
+  --brand-dark: #181818;
+  --surface: #f8f8f8;
+  --wa: #25d366;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  color: var(--brand-dark);
+  line-height: 1.55;
+  background: #fff;
+}
+
+.container { width: min(1120px, 92%); margin: 0 auto; }
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  border-bottom: 3px solid var(--brand-yellow);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-image {
+  width: 130px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.brand-name { margin: 0; font-weight: 800; color: var(--brand-red); letter-spacing: 0.05em; }
+.brand-tag { margin: 0; font-size: 0.72rem; max-width: 460px; }
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links a { text-decoration: none; color: var(--brand-dark); font-weight: 600; }
+
+.hero {
+  background: linear-gradient(180deg, #fffdf3 0%, #f6f6f6 100%);
+  padding: 4.5rem 0 3rem;
+}
+
+.hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.25rem; }
+.eyebrow { color: var(--brand-red); text-transform: uppercase; font-weight: 700; font-size: 0.78rem; }
+h1 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.05; margin: 0.55rem 0; }
+.hero-sub { font-weight: 700; color: #333; margin-top: 0; }
+.hero-panel {
+  background: #fff;
+  border: 1px solid #eee;
+  border-left: 5px solid var(--brand-red);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1rem; }
+.btn {
+  display: inline-block;
+  padding: 0.72rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+}
+.btn-primary { background: var(--brand-red); color: #fff; }
+.btn-outline { border: 2px solid var(--brand-red); color: var(--brand-red); }
+.btn-accent { background: var(--brand-yellow); color: #111; }
+.btn-whatsapp { background: var(--wa); color: #083019; }
+.btn.large { margin-top: 1rem; }
+
+section { scroll-margin-top: 85px; }
+.section-block { padding: 3rem 0; }
+.services { padding: 2.8rem 0; }
+.alt { background: #fff8da; }
+
+.cards { display: grid; gap: 1rem; margin-top: 1rem; }
+.cards.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cards.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.split { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1rem; }
+
+.card,
+.vehicle-card {
+  background: #fff;
+  border: 1px solid #ececec;
+  border-top: 4px solid var(--brand-yellow);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.section-intro { margin-top: 0; }
+.tag {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+}
+.tag.warn { background: #fff2cc; color: #7f5600; }
+.tag.danger { background: #ffe2e2; color: #8a0000; }
+.tag.success { background: #d8ffe9; color: #00592c; }
+
+.process-list { padding-left: 1.2rem; }
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  padding-left: 1.2rem;
+}
+
+.quote { margin: 0; font-style: italic; }
+.quote cite { display: block; margin-top: 0.6rem; font-style: normal; font-weight: 600; }
+
+.site-footer {
+  background: #111;
+  color: #eee;
+  padding: 2rem 0 5rem;
+}
+
+.floating-wa {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  background: var(--wa);
+  color: #052b14;
+  text-decoration: none;
+  font-weight: 800;
+  padding: 0.82rem 1rem;
+  border-radius: 999px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .cards.two,
+  .cards.three,
+  .feature-grid,
+  .split { grid-template-columns: 1fr; }
+
+  .nav-links { display: none; }
+  .brand-tag { display: none; }
+  .logo-image { width: 105px; }
+}
