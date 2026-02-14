@@ -38,3 +38,12 @@ Open in browser:
 ```text
 http://localhost:4173
 ```
+
+
+## Chrome preview launch
+
+```bash
+./start-preview.sh
+```
+
+Then open Chrome to: `http://localhost:4173`
