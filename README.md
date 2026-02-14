@@ -1,29 +1,39 @@
-# Kumul Hire Cars Website Starter
+# Kumul Hire Cars Website Prototype
 
-This repository now includes a responsive branded website prototype for **Kumul Hire Cars** based on your revised business model:
+This project contains an improved responsive website prototype for **Kumul Hire Cars** following your revised service model for PNG.
 
-- Vehicle Rentals
-- Used Car Sales (In-Stock + Incoming)
-- Direct Car Import to Papua New Guinea
-- WhatsApp-only conversion model
+## What is included
+
+- Full homepage structure with these sections:
+  - Home / Hero
+  - About Us
+  - Vehicles for Sale (In-Stock + Incoming)
+  - Vehicles for Hire
+  - Import a Car to PNG
+  - How It Works (Import Process)
+  - Corporate & Fleet Services
+  - Testimonials
+  - Blog / News
+  - Admin Dashboard scope
+- WhatsApp-only lead model across all CTAs.
+- Sticky floating WhatsApp button.
+- Urgency labels (Limited Stock, Just Arrived, Selling Fast, Incoming Shipment).
+- Lightweight WhatsApp link automation via `whatsapp.js`.
+- Logo-colored branding with a logo placeholder in the header.
 
 ## Files
 
-- `index.html` – Complete site structure and page sections in one scrollable layout.
-- `styles.css` – Brand styling using logo-inspired colors (red, yellow, dark accents).
+- `index.html` – Complete page content and structure.
+- `styles.css` – Branded, responsive styles.
+- `whatsapp.js` – Generates all `wa.me` links from per-button message templates.
 
-## Contact Model Implemented
-
-All inquiry and conversion buttons route users to WhatsApp with pre-filled messages.
-No email, no traditional contact forms, and no phone dial links are included.
-
-## How to run
+## Run locally
 
 ```bash
 python3 -m http.server 4173
 ```
 
-Then open:
+Open in browser:
 
 ```text
 http://localhost:4173
